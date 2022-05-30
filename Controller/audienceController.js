@@ -28,7 +28,8 @@ const ADD_MEMBER = async (req, res) => {
       },
       tags: [tag],
     });
-    return res.send(response);
+    const temp = { status: "ok" };
+    return res.send(temp);
   } catch (err) {
     return res.status(400).send(err);
   }
